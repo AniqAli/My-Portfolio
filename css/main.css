@@ -175,6 +175,7 @@ button {
   flex-direction: column;
   gap: 0.25rem;
   width: 100%;
+  margin-top: 2.5rem;
 }
 .sidebar__socials {
   margin-top: auto;
@@ -938,6 +939,7 @@ button {
   text-transform: uppercase;
   color: #4a5cf7;
   margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
 }
 .about__name {
   font-size: clamp(2.2rem, 4vw, 3.2rem);
@@ -983,8 +985,6 @@ button {
 }
 .about__skills {
   margin-top: 2.5rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: 2rem;
 }
 @media (max-width: 768px) {
