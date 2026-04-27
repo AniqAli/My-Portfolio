@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Aniqa Ali — Full-Stack Developer & Designer. Building elegant, performant web experiences." />
+  <title>Aniqa Ali — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+  <!-- Mobile toggle -->
+  <button class="sidebar-toggle" aria-label="Toggle navigation">
+    <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/></svg>
+  </button>
+
+  <div class="sidebar-overlay"></div>
+
+  <!-- ─── Sidebar ──────────────────────────────── -->
+  <aside class="sidebar">
+    <div class="sidebar__avatar">
+      <!-- Replace src with your actual photo -->
+      <div class="avatar-placeholder">
+        <div class="project-card__image profile-logo project-card__image--placeholder">
+          <img src="/assets/images/logo-img.png" alt="Aniq Ali" class="img-fluid object-fit-cover" style="margin-top: 12px;" />
+        </div>
+      </div>
+    </div>
+
+    <nav class="sidebar__nav">
+      <a href="#" class="nav-link active" data-section="home">
+        <span class="nav-icon">
+          <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+        </span>
+        <span>Home</span>
+      </a>
+      <a href="#" class="nav-link" data-section="projects">
+        <span class="nav-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+        </span>
+        <span>Projects</span>
+      </a>
+      <a href="#" class="nav-link" data-section="about">
+        <span class="nav-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+        </span>
+        <span>About Me</span>
+      </a>
+    </nav>
+
+    <div class="sidebar__socials">
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/aniqali/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+      <!-- GitHub -->
+      <a href="https://github.com/aniqali" class="social-link" aria-label="GitHub" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+      </a>
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/aneeeq.ali.21" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+      <!-- Dribbble -->
+      <a href="#" class="social-link" aria-label="Dribbble" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308 2.3-1.555 3.936-4.02 4.395-6.87zm-6.115 7.808c-.153-.9-.75-4.032-2.19-7.77l-.066.02c-5.79 2.015-7.86 6.017-8.04 6.39 1.73 1.35 3.92 2.166 6.29 2.166 1.42 0 2.77-.29 4.006-.806zm-9.62-2.58c.232-.4 3.045-5.055 8.332-6.765.135-.045.27-.084.405-.12-.26-.585-.54-1.167-.832-1.74C9.12 11.702 3.35 11.64 2.76 11.64c-.01.13-.01.26-.01.39 0 2.44.923 4.662 2.435 6.34zm-2.31-8.15c.6.013 5.515.07 10.095-1.35C12.455 7.43 11.44 5.7 10.37 4.13c-2.97.87-5.257 3.18-6.286 6.04v.02zm7.72-7.1c1.096 1.63 2.077 3.415 2.88 5.312l.013.03c2.71-.82 5.48-1.013 6.99-.9-.99-2.61-3.14-4.64-5.796-5.44l-.09-.003c-1.4-.432-2.876-.528-4-.022l.003.023z"/></svg>
+      </a>
+    </div>
+  </aside>
+
+  <!-- ─── Main Content ──────────────────────────── -->
+  <main class="main-content">
+
+    <!-- HOME -->
+    <section id="home" class="section section--home active">
+      <!-- dot grid background -->
+      <div class="hero__grid-bg"></div>
+
+      <div class="hero">
+        <!-- LEFT: text content -->
+        <div class="hero__content">
+
+          <!-- availability badge -->
+          <div class="hero__badge animate-fade-up delay-1">
+            <span class="hero__badge-dot"></span>
+            Available for freelance work
+          </div>
+
+          <div class="hero__lines">
+            <div class="hero__line animate-fade-up delay-2">
+              <span class="hero__num">01</span>
+              <h1 class="hero__text">
+                <span class="bracket">&lt;</span><span class="highlight">Hello, I'm </span><span class="accent" id="typed-name">Aniq Ali</span><span class="bracket">!&gt;</span><span class="cursor"></span>
+              </h1>
+            </div>
+            <div class="hero__line animate-fade-up delay-3">
+              <span class="hero__num">02</span>
+              <p class="hero__text">
+                <span class="bracket">&lt;</span><span class="highlight">I design</span><span class="accent"> &amp; develop</span><span class="bracket">&gt;</span>
+              </p>
+            </div>
+            <div class="hero__line animate-fade-up delay-4">
+              <span class="hero__num">03</span>
+              <p class="hero__text">
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="highlight">websites.</span><span class="bracket">&gt;</span>
+              </p>
+            </div>
+          </div>
+
+          <p class="hero__sub animate-fade-up delay-5">I also build full-stack applications &amp; brand identities.</p>
+
+          <div class="hero__actions animate-fade-up delay-6">
+            <button class="hero__learn-more" data-section="projects">
+              View Projects
+              <span class="arrow-box">
+                <svg viewBox="0 0 24 24"><path d="M20 12l-8 8-1.41-1.41L16.17 13H4v-2h12.17l-5.58-5.59L12 4z"/></svg>
+              </span>
+            </button>
+            <button class="hero__secondary" data-section="about">About me</button>
+          </div>
+
+          <!-- stat chips -->
+          <div class="hero__stats animate-fade-up delay-7">
+            <div class="hero__stat">
+              <span class="hero__stat-num">3+</span>
+              <span class="hero__stat-label">Years exp.</span>
+            </div>
+            <div class="hero__stat-divider"></div>
+            <div class="hero__stat">
+              <span class="hero__stat-num">20+</span>
+              <span class="hero__stat-label">Projects</span>
+            </div>
+            <div class="hero__stat-divider"></div>
+            <div class="hero__stat">
+              <span class="hero__stat-num">10+</span>
+              <span class="hero__stat-label">Happy clients</span>
+            </div>
+          </div>
+
+          <!-- Mobile-only CTA -->
+          <a href="#" class="cta-button--mobile animate-fade-up delay-8" id="cta-btn-mobile">
+            <span>Work<br>with me</span>
+            <span class="cta-arrow">
+              <svg viewBox="0 0 24 24"><path d="M14 3l7 7-7 7-1.41-1.41L18.17 11H3V9h15.17l-5.58-5.59z"/></svg>
+            </span>
+          </a>
+        </div>
+
+        <!-- RIGHT: visual card stack -->
+        <div class="hero__visual animate-fade-in delay-4">
+          <!-- glow orb -->
+          <div class="hero__orb"></div>
+
+          <!-- floating code card -->
+          <div class="hero__card hero__card--code">
+            <div class="hero__card-dots">
+              <span style="background:#ff5f57"></span>
+              <span style="background:#febc2e"></span>
+              <span style="background:#28c840"></span>
+            </div>
+            <pre class="hero__code"><span class="c-key">const</span> <span class="c-var">developer</span> = {
+  <span class="c-prop">name</span>: <span class="c-str">"Aniq Ali"</span>,
+  <span class="c-prop">skills</span>: [<span class="c-str">"React"</span>, <span class="c-str">"JS"</span>],
+  <span class="c-prop">available</span>: <span class="c-bool">true</span>
+};</pre>
+          </div>
+
+          <!-- floating mini stat card -->
+          <div class="hero__card hero__card--stat">
+            <svg viewBox="0 0 20 20" fill="none"><path d="M10 2l2.4 4.8 5.3.8-3.85 3.75.91 5.3L10 14.27l-4.76 2.38.91-5.3L2.3 7.6l5.3-.8z" fill="#4a5cf7" stroke="#4a5cf7" stroke-width="0.5"/></svg>
+            <span>Top Rated</span>
+          </div>
+
+          <!-- floating tech pill -->
+          <div class="hero__card hero__card--pill">
+            <span>⚡</span> React &amp; JS
+          </div>
+        </div>
+      </div>
+
+      <!-- scroll hint -->
+      <div class="hero__scroll animate-fade-up delay-8">
+        <span>Scroll</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section section--projects">
+      <div class="projects-header animate-fade-up delay-1">
+        <p class="projects-header__label">Selected Work</p>
+        <h2 class="projects-header__title">Projects</h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <article class="project-card animate-fade-up delay-2">
+          <!-- <div class="project-card__image project-card__image--placeholder">🛒</div> -->
+          <div class="project-card__image project-card__image--placeholder">
+            <img src="/assets/images/project-get-licensed.svg" alt="Get Licensed Product" class="img-fluid object-fit-cover" />
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="project-card__tag">React</span>
+              <span class="project-card__tag">Docker</span>
+              <span class="project-card__tag">Cloud</span>
+              <span class="project-card__tag">JS</span>
+              <span class="project-card__tag">CSS</span>
+            </div>
+            <h3 class="project-card__title">Get Licensed Product</h3>
+            <!-- <p class="project-card__desc">Full-stack shopping platform with real-time inventory, Stripe payments, and an admin dashboard.</p> -->
+            <div class="project-card__footer">
+              <div class="project-card__links">
+                <a href="https://www.get-licensed.co.uk/" target="_blank" class="project-card__link">Live</a>
+                <!-- <a href="#" class="project-card__link">Code</a> -->
+              </div>
+              <!-- <span class="project-card__arrow">
+                <svg viewBox="0 0 24 24"><path d="M14 3l7 7-7 7-1.41-1.41L18.17 11H3V9h15.17l-5.58-5.59z"/></svg>
+              </span> -->
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card animate-fade-up delay-2">
+          <!-- <div class="project-card__image project-card__image--placeholder">🛒</div> -->
+          <div class="project-card__image project-card__image--placeholder">
+            <img src="/assets/images/project-docker.svg" alt="ClicktoDeploy Project" class="img-fluid object-fit-cover" />
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="project-card__tag">React</span>
+              <span class="project-card__tag">Docker</span>
+              <span class="project-card__tag">Cloud</span>
+              <span class="project-card__tag">JS</span>
+              <span class="project-card__tag">CSS</span>
+            </div>
+            <h3 class="project-card__title">ClicktoDeploy Project</h3>
+            <!-- <p class="project-card__desc">Full-stack shopping platform with real-time inventory, Stripe payments, and an admin dashboard.</p> -->
+            <div class="project-card__footer">
+              <div class="project-card__links">
+                <a href="https://github-fyp.netlify.app/" target="_blank" class="project-card__link">Live</a>
+                <!-- <a href="#" class="project-card__link">Code</a> -->
+              </div>
+              <!-- <span class="project-card__arrow">
+                <svg viewBox="0 0 24 24"><path d="M14 3l7 7-7 7-1.41-1.41L18.17 11H3V9h15.17l-5.58-5.59z"/></svg>
+              </span> -->
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card animate-fade-up delay-3">
+          <!-- <div class="project-card__image project-card__image--placeholder">📊</div> -->
+          <div class="project-card__image project-card__image--placeholder">
+            <img src="/assets/images/project-02-img.png" alt="Games Web Application" class="img-fluid object-fit-cover" />
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="project-card__tag">React JS</span>
+              <span class="project-card__tag">HTML5</span>
+              <span class="project-card__tag">CSS3</span>
+              <span class="project-card__tag">JS</span>
+            </div>
+            <h3 class="project-card__title">Games Website</h3>
+            <!-- <p class="project-card__desc">Interactive data visualization dashboard with live charts, filtering, and export capabilities.</p> -->
+            <div class="project-card__footer">
+              <div class="project-card__links">
+                <a href="https://demo-4738476.netlify.app/" target="_blank" class="project-card__link">Live</a>
+                <!-- <a href="#" class="project-card__link">Code</a> -->
+              </div>
+              <!-- <span class="project-card__arrow">
+                <svg viewBox="0 0 24 24"><path d="M14 3l7 7-7 7-1.41-1.41L18.17 11H3V9h15.17l-5.58-5.59z"/></svg>
+              </span> -->
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card animate-fade-up delay-4">
+          <!-- <div class="project-card__image project-card__image--placeholder">🎨</div> -->
+          <div class="project-card__image project-card__image--placeholder">
+            <img src="/assets/images/project-03-img.png" alt="Car Wash Website" class="img-fluid object-fit-cover" />
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="project-card__tag">HTML5</span>
+              <span class="project-card__tag">CSS3</span>
+              <span class="project-card__tag">BootStrap</span>
+              <span class="project-card__tag">JS</span>
+            </div>
+            <h3 class="project-card__title">Car Wash Website</h3>
+            <!-- <p class="project-card__desc">Complete brand design system including logo, color palette, typography, and component library.</p> -->
+            <div class="project-card__footer">
+              <div class="project-card__links">
+                <a href="https://washcar.com.pk/car-wash/" target="_blank" class="project-card__link">Live</a>
+                <!-- <a href="#" class="project-card__link">Code</a> -->
+              </div>
+              <!-- <span class="project-card__arrow">
+                <svg viewBox="0 0 24 24"><path d="M14 3l7 7-7 7-1.41-1.41L18.17 11H3V9h15.17l-5.58-5.59z"/></svg>
+              </span> -->
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card animate-fade-up delay-5">
+          <!-- <div class="project-card__image project-card__image--placeholder">📱</div> -->
+          <div class="project-card__image project-card__image--placeholder">
+            <img src="/assets/images/project-04-img.png" alt="Car Selling Web" class="img-fluid object-fit-cover" />
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="project-card__tag">HTML</span>
+              <span class="project-card__tag">CSS</span>
+              <span class="project-card__tag">JavaScript</span>
+              <span class="project-card__tag">BootStrap</span>
+            </div>
+            <h3 class="project-card__title">Car Selling Web</h3>
+            <!-- <p class="project-card__desc">Cross-platform task management app with offline sync, push notifications, and team collaboration.</p> -->
+            <div class="project-card__footer">
+              <div class="project-card__links">
+                <a href="https://mywebsite-5afd5.web.app/" target="_blank" class="project-card__link">Live</a>
+                <!-- <a href="#" class="project-card__link">Code</a> -->
+              </div>
+              <!-- <span class="project-card__arrow">
+                <svg viewBox="0 0 24 24"><path d="M14 3l7 7-7 7-1.41-1.41L18.17 11H3V9h15.17l-5.58-5.59z"/></svg>
+              </span> -->
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card animate-fade-up delay-5">
+          <!-- <div class="project-card__image project-card__image--placeholder">📱</div> -->
+          <div class="project-card__image project-card__image--placeholder">
+            <img src="/assets/images/project-teciz.svg" alt="TECIZ Everything Startup Project" class="img-fluid object-fit-cover" />
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="project-card__tag">HTML</span>
+              <span class="project-card__tag">CSS</span>
+              <span class="project-card__tag">JavaScript</span>
+              <span class="project-card__tag">React JS</span>
+              <span class="project-card__tag">BootStrap</span>
+            </div>
+            <h3 class="project-card__title">TECIZ Everything Startup Project</h3>
+            <!-- <p class="project-card__desc">Cross-platform task management app with offline sync, push notifications, and team collaboration.</p> -->
+            <div class="project-card__footer">
+              <div class="project-card__links">
+                <a href="https://tecizeverything.com/" target="_blank" class="project-card__link">Live</a>
+                <!-- <a href="#" class="project-card__link">Code</a> -->
+              </div>
+              <!-- <span class="project-card__arrow">
+                <svg viewBox="0 0 24 24"><path d="M14 3l7 7-7 7-1.41-1.41L18.17 11H3V9h15.17l-5.58-5.59z"/></svg>
+              </span> -->
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card animate-fade-up delay-5">
+          <!-- <div class="project-card__image project-card__image--placeholder">📱</div> -->
+          <div class="project-card__image project-card__image--placeholder">
+            <img src="/assets/images/project-05-img.png" alt="ERP System Prototype" class="img-fluid object-fit-cover" />
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="project-card__tag">Figma</span>
+              <span class="project-card__tag">UI/UX</span>
+              <span class="project-card__tag">Designing</span>
+            </div>
+            <h3 class="project-card__title">ERP System Prototype</h3>
+            <!-- <p class="project-card__desc">Cross-platform task management app with offline sync, push notifications, and team collaboration.</p> -->
+            <div class="project-card__footer">
+              <div class="project-card__links">
+                <a href="https://www.figma.com/proto/LUfPDNhW29KzW6oSF5RZ7K/HiTech?node-id=10%3A0&scaling=scale-down&page-id=0%3A1" target="_blank" class="project-card__link">Live</a>
+                <!-- <a href="#" class="project-card__link">Code</a> -->
+              </div>
+              <!-- <span class="project-card__arrow">
+                <svg viewBox="0 0 24 24"><path d="M14 3l7 7-7 7-1.41-1.41L18.17 11H3V9h15.17l-5.58-5.59z"/></svg>
+              </span> -->
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card animate-fade-up delay-5">
+          <!-- <div class="project-card__image project-card__image--placeholder">📱</div> -->
+          <div class="project-card__image project-card__image--placeholder">
+            <img src="/assets/images/project-06-img.png" alt="ERP Landing Page" class="img-fluid object-fit-cover" />
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="project-card__tag">UI/UX</span>
+              <span class="project-card__tag">HTML</span>
+              <span class="project-card__tag">CSS</span>
+              <span class="project-card__tag">JS</span>
+              <span class="project-card__tag">Email Integration</span>
+            </div>
+            <h3 class="project-card__title">ERP Landing Page</h3>
+            <!-- <p class="project-card__desc">Cross-platform task management app with offline sync, push notifications, and team collaboration.</p> -->
+            <div class="project-card__footer">
+              <div class="project-card__links">
+                <!-- <a href="https://www.figma.com/proto/LUfPDNhW29KzW6oSF5RZ7K/HiTech?node-id=10%3A0&scaling=scale-down&page-id=0%3A1" target="_blank" class="project-card__link">Live</a> -->
+                <!-- <a href="#" class="project-card__link">Code</a> -->
+              </div>
+              <!-- <span class="project-card__arrow">
+                <svg viewBox="0 0 24 24"><path d="M14 3l7 7-7 7-1.41-1.41L18.17 11H3V9h15.17l-5.58-5.59z"/></svg>
+              </span> -->
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card animate-fade-up delay-5">
+          <!-- <div class="project-card__image project-card__image--placeholder">📱</div> -->
+          <div class="project-card__image project-card__image--placeholder">
+            <img src="/assets/images/project-07-img.png" alt="landing page" class="img-fluid object-fit-cover" />
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="project-card__tag">HTML</span>
+              <span class="project-card__tag">SCSS</span>
+              <span class="project-card__tag">JS</span>
+              <span class="project-card__tag">UI/UX</span>
+              <span class="project-card__tag">Email Integration</span>
+            </div>
+            <h3 class="project-card__title">Company Landing Page</h3>
+            <!-- <p class="project-card__desc">Cross-platform task management app with offline sync, push notifications, and team collaboration.</p> -->
+            <div class="project-card__footer">
+              <div class="project-card__links">
+                <!-- <a href="https://www.figma.com/proto/LUfPDNhW29KzW6oSF5RZ7K/HiTech?node-id=10%3A0&scaling=scale-down&page-id=0%3A1" target="_blank" class="project-card__link">Live</a> -->
+                <!-- <a href="#" class="project-card__link">Code</a> -->
+              </div>
+              <!-- <span class="project-card__arrow">
+                <svg viewBox="0 0 24 24"><path d="M14 3l7 7-7 7-1.41-1.41L18.17 11H3V9h15.17l-5.58-5.59z"/></svg>
+              </span> -->
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card animate-fade-up delay-5">
+          <!-- <div class="project-card__image project-card__image--placeholder">📱</div> -->
+          <div class="project-card__image project-card__image--placeholder">
+            <img src="/assets/images/project-08-img.png" alt="Agency Landing Page" class="img-fluid object-fit-cover" />
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="project-card__tag">HTML5</span>
+              <span class="project-card__tag">CSS3</span>
+              <span class="project-card__tag">SCSS</span>
+              <span class="project-card__tag">UI/UX</span>
+            </div>
+            <h3 class="project-card__title">Agency Landing Page</h3>
+            <!-- <p class="project-card__desc">Cross-platform task management app with offline sync, push notifications, and team collaboration.</p> -->
+            <div class="project-card__footer">
+              <div class="project-card__links">
+                <!-- <a href="https://www.figma.com/proto/LUfPDNhW29KzW6oSF5RZ7K/HiTech?node-id=10%3A0&scaling=scale-down&page-id=0%3A1" target="_blank" class="project-card__link">Live</a> -->
+                <!-- <a href="#" class="project-card__link">Code</a> -->
+              </div>
+              <!-- <span class="project-card__arrow">
+                <svg viewBox="0 0 24 24"><path d="M14 3l7 7-7 7-1.41-1.41L18.17 11H3V9h15.17l-5.58-5.59z"/></svg>
+              </span> -->
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section section--about">
+      <div class="about">
+        <p class="about__label animate-fade-up delay-1">Get to know me</p>
+        <h2 class="about__name animate-fade-up delay-2">ANIQ ALI</h2>
+        <p class="about__location animate-fade-up delay-2">Based remotely · Open to opportunities</p>
+
+        <h3 class="about__section-title animate-fade-up delay-3">I design and develop websites that are elegant, intuitive, and fast.</h3>
+        <p class="about__text animate-fade-up delay-3">Driven by a deep passion for user experience and clean code, I specialize in bridging the gap between design and engineering. I ensure effective, end-to-end delivery on every project — no intermediaries.</p>
+
+        <h3 class="about__section-title animate-fade-up delay-4">I also specialize in development &amp; brand identity.</h3>
+        <p class="about__text animate-fade-up delay-4">From a simple idea, a unique digital product is built. My clients appreciate my attention to detail and the quality of work I bring, informed by years of hands-on experience across agencies and startups.</p>
+        <a href="https://www.linkedin.com/in/aniqali/" target="_blank" class="about__link animate-fade-up delay-4">
+          Discover my journey (LinkedIn)
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M14 3l7 7-7 7-1.41-1.41L18.17 11H3V9h15.17l-5.58-5.59z"/></svg>
+        </a>
+
+        <div class="about__skills animate-fade-up delay-5">
+          <div class="about__skill-group">
+            <h3><span>.</span>Tech Skills</h3>
+            <div class="about__skill-icons">
+              <!-- HTML5 -->
+              <span class="skill-badge">
+                <span class="skill-icon">
+                  <svg viewBox="0 0 24 24" fill="#E34F26"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.413l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.413z"/></svg>
+                </span>
+                HTML5
+              </span>
+              <span class="skill-badge">
+                <span class="skill-icon">
+                  <svg viewBox="0 0 24 24" fill="#1572B6"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.413l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.413z"/></svg>
+                </span>
+                CSS3
+              </span>
+              <span class="skill-badge">
+                <span class="skill-icon">
+                  <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-.152 3.494c1.61 0 2.993.604 4.148 1.81.87.915 1.433 1.99 1.69 3.226.084.41.11.832.076 1.253-.244 2.837-2.362 5.286-5.155 5.945-.084.02-.168.038-.254.053-.112.02-.226.034-.34.045-.195.018-.39.025-.586.017-.77-.032-1.514-.263-2.17-.65-.65-.386-1.195-.918-1.588-1.554a4.93 4.93 0 01-.72-2.565c0-.082.003-.163.007-.245.108-2.656 2.066-4.928 4.686-5.298.07-.01.14-.018.21-.025.33-.033.665-.027.996.012.045.006.09.012.135.019a5.17 5.17 0 011.427.503c-.033-.015-.065-.032-.098-.047a5.474 5.474 0 00-2.464-.499zm5.534 4.783c.015.096.026.193.033.29.066.98-.178 1.964-.7 2.79-.522.827-1.296 1.48-2.2 1.853a5.038 5.038 0 01-1.967.382c-.315 0-.63-.03-.94-.09-.758-.144-1.456-.49-2.02-1.003a4.2 4.2 0 01-1.117-1.69 4.26 4.26 0 01-.216-1.99c.22-1.786 1.516-3.285 3.26-3.736.21-.054.425-.09.64-.107.22-.017.44-.015.66.006.55.056 1.076.238 1.544.528.754.465 1.32 1.196 1.57 2.044.073.25.11.51.11.77.004.32-.046.64-.144.948.15-.32.25-.66.296-1.01.044-.35.03-.705-.04-1.05-.036-.178-.086-.354-.15-.524z" fill="#CC6699"/></svg>
+                </span>
+                SCSS
+              </span>
+              <span class="skill-badge">
+                <span class="skill-icon">
+                  <svg viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#7952B3"/><path d="M6.5 5h5.5c1.2 0 2.1.3 2.8.9.6.6.9 1.3.9 2.2 0 .6-.2 1.2-.5 1.7-.3.4-.7.8-1.2 1 .7.2 1.3.5 1.7 1.1.4.5.6 1.2.6 1.9 0 1-.4 1.9-1.1 2.5-.7.6-1.7.9-2.9.9H6.5V5zm2 4.8h3c.6 0 1.1-.1 1.4-.4.3-.3.5-.7.5-1.1 0-.5-.2-.8-.5-1.1-.3-.3-.8-.4-1.4-.4h-3v3zm0 5h3.3c.7 0 1.2-.2 1.6-.5.4-.3.5-.8.5-1.3 0-.6-.2-1-.5-1.3-.4-.3-.9-.5-1.6-.5H8.5v3.6z" fill="white"/></svg>
+                </span>
+                Bootstrap
+              </span>
+              <span class="skill-badge">
+                <span class="skill-icon">
+                  <svg viewBox="0 0 24 24" fill="#F7DF1E"><rect width="24" height="24" fill="#F7DF1E"/><path d="M6 18l1.5-1c.3.5.6.9 1.1.9.5 0 .8-.2.8-.8V11h2v6c0 1.8-1 2.6-2.5 2.6C7.5 19.6 6.5 18.9 6 18zm8.5 0l1.5-1c.4.6.9 1 1.7 1 .7 0 1.1-.3 1.1-.8 0-.6-.4-.8-1.1-1.1l-.5-.2c-1.3-.5-2.2-1.2-2.2-2.6 0-1.3 1-2.3 2.6-2.3 1.1 0 1.9.4 2.5 1.4l-1.4.9c-.3-.5-.6-.7-1.1-.7s-.8.3-.8.7c0 .5.3.7 1 1l.5.2c1.5.6 2.4 1.3 2.4 2.8 0 1.6-1.3 2.4-3 2.4-1.7 0-2.8-.8-3.2-1.7z"/></svg>
+                </span>
+                JavaScript
+              </span>
+              <span class="skill-badge">
+                <span class="skill-icon">
+                  <svg viewBox="0 0 24 24" fill="#61DAFB"><path d="M12 10.11c1.03 0 1.87.84 1.87 1.89 0 1-.84 1.85-1.87 1.85-1.03 0-1.87-.85-1.87-1.85 0-1.05.84-1.89 1.87-1.89M7.37 20c.63.38 2.01-.2 3.6-1.7-.52-.59-1.03-1.23-1.51-1.9a22.7 22.7 0 01-2.4-.36c-.51 2.14-.32 3.61.31 3.96m.71-5.74l-.29-.51c-.11.29-.22.58-.29.86.27.06.57.11.88.16l-.3-.51m6.54-.76l.81-1.5-.81-1.5c-.3-.53-.62-1-.91-1.47C13.17 9 12.6 9 12 9c-.6 0-1.17 0-1.71.03-.29.47-.61.94-.91 1.47L8.57 12l.81 1.5c.3.53.62 1 .91 1.47.54.03 1.11.03 1.71.03.6 0 1.17 0 1.71-.03.29-.47.61-.94.91-1.47M12 6.78c-.19.22-.39.45-.59.72h1.18c-.2-.27-.4-.5-.59-.72m0 10.44c.19-.22.39-.45.59-.72h-1.18c.2.27.4.5.59.72M16.62 4c-.62-.38-2 .2-3.59 1.7.52.59 1.03 1.23 1.51 1.9.82.08 1.63.2 2.4.36.51-2.14.32-3.61-.32-3.96m-.7 5.74l.29.51c.11-.29.22-.58.29-.86-.27-.06-.57-.11-.88-.16l.3.51m1.45-7.05c1.47.84 1.63 3.05 1.01 5.63 2.54.75 4.37 1.99 4.37 3.68 0 1.69-1.83 2.93-4.37 3.68.62 2.58.46 4.79-1.01 5.63-1.46.84-3.45-.12-5.37-1.95-1.92 1.83-3.91 2.79-5.38 1.95-1.46-.84-1.62-3.05-1-5.63-2.54-.75-4.37-1.99-4.37-3.68 0-1.69 1.83-2.93 4.37-3.68-.62-2.58-.46-4.79 1-5.63 1.47-.84 3.46.12 5.38 1.95 1.92-1.83 3.91-2.79 5.37-1.95z"/></svg>
+                </span>
+                React
+              </span>
+              <span class="skill-badge">
+                <span class="skill-icon">
+                  <svg viewBox="0 0 32 32"><path d="M3.672 5.102c3.371 5.177 7.221 9.443 11.443 12.849-2.161 2.302-4.677 4.214-7.776 5.661A17.382 17.382 0 01.5 25.099a15.9 15.9 0 01-.5-.036v1.927l.615.031a19.336 19.336 0 007.927-1.578c3.38-1.563 6.12-3.677 8.432-6.198 2.286 1.62 4.703 3.005 7.302 4.115a29.552 29.552 0 007.724 1.932l.5.052V23.37l-.5-.047a27.562 27.562 0 01-7.135-1.797 37.49 37.49 0 01-6.604-3.651c3.141-4.026 5.328-8.922 6.099-14.875l.057-.437H22.39l-.052.463c-.745 5.599-2.818 10.183-5.734 13.964C12.703 13.453 9.1 9.406 5.922 4.594L5.615 4H3.333l.339 1.102z" fill="#0769AD"/></svg>
+                </span>
+                jQuery
+              </span>
+              <span class="skill-badge">
+                <span class="skill-icon">
+                  <svg viewBox="0 0 24 24"><path d="M3.89 15.672L6.255.461A.542.542 0 017.27.288l2.543 4.771zm16.794 3.692l-2.25-14a.54.54 0 00-.919-.295L3.316 19.365l7.856 4.427a1.621 1.621 0 001.588 0zM14.3 7.147l-1.82-3.482a.542.542 0 00-.96 0L3.53 17.984z" fill="#FFCA28"/></svg>
+                </span>
+                Firebase
+              </span>
+              <span class="skill-badge">
+                <span class="skill-icon">
+                  <svg viewBox="0 0 24 24" fill="#181717"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                </span>
+                GitHub
+              </span>
+
+              <!-- API Integration -->
+              <span class="skill-badge">
+                <span class="skill-icon">
+                  <svg viewBox="0 0 24 24" fill="#6366f1"><path d="M14 12l-2 2-2-2 2-2 2 2zm-2-6l2.12 2.12-2.12 2.13-2.12-2.13L12 6zm6 6l-2.12 2.12-2.13-2.12 2.13-2.12L18 12zM6 12l2.12-2.12 2.13 2.12-2.13 2.12L6 12zm6 6l-2.12-2.12 2.12-2.13 2.12 2.13L12 18zm0 4C6.48 22 2 17.52 2 12S6.48 2 12 2s10 4.48 10 10-4.48 10-10 10z"/></svg>
+                </span>
+                API Integration
+              </span>
+
+              <!-- Claude (Anthropic) -->
+              <span class="skill-badge">
+                <span class="skill-icon">
+                  <svg viewBox="0 0 24 24" fill="#D97706"><path d="M13.827 3.52l8.486 14.95H5.326l8.501-14.95zm0-3.52L0 24h27.654L13.827 0z"/></svg>
+                </span>
+                Claude AI
+              </span>
+
+              <!-- ChatGPT (OpenAI) -->
+              <span class="skill-badge">
+                <span class="skill-icon">
+                  <svg viewBox="0 0 24 24" fill="#10a37f"><path d="M22.282 9.821a5.985 5.985 0 00-.516-4.91 6.046 6.046 0 00-6.51-2.9A6.065 6.065 0 004.981 4.18a5.985 5.985 0 00-3.998 2.9 6.046 6.046 0 00.743 7.097 5.98 5.98 0 00.51 4.911 6.051 6.051 0 006.515 2.9A5.985 5.985 0 0013.26 24a6.056 6.056 0 005.772-4.206 5.99 5.99 0 003.997-2.9 6.056 6.056 0 00-.747-7.073zM13.26 22.43a4.476 4.476 0 01-2.876-1.04l.141-.081 4.779-2.758a.795.795 0 00.392-.681v-6.737l2.02 1.168a.071.071 0 01.038.052v5.583a4.504 4.504 0 01-4.494 4.494zM3.6 18.304a4.47 4.47 0 01-.535-3.014l.142.085 4.783 2.759a.771.771 0 00.78 0l5.843-3.369v2.332a.08.08 0 01-.033.062L9.74 19.95a4.5 4.5 0 01-6.14-1.646zM2.34 7.896a4.475 4.475 0 012.366-1.973V11.6a.766.766 0 00.388.676l5.815 3.355-2.02 1.168a.076.076 0 01-.071 0L4.01 14.107A4.5 4.5 0 012.34 7.896zm16.597 3.868l-5.843-3.371 2.02-1.163a.076.076 0 01.071 0l4.81 2.778a4.5 4.5 0 01-.676 8.115V12.56a.782.782 0 00-.382-.796zm2.01-3.023l-.141-.085-4.774-2.782a.776.776 0 00-.785 0L9.409 9.25V6.917a.071.071 0 01.028-.061l4.83-2.789a4.5 4.5 0 016.72 4.674zm-12.64 4.135l-2.02-1.164a.08.08 0 01-.038-.057V6.075a4.5 4.5 0 017.375-3.453l-.142.08L8.704 5.46a.795.795 0 00-.393.681zm1.097-2.365l2.602-1.5 2.607 1.5v2.999l-2.597 1.5-2.607-1.5z"/></svg>
+                </span>
+                ChatGPT
+              </span>
+
+              <!-- HubSpot -->
+              <span class="skill-badge">
+                <span class="skill-icon">
+                  <svg viewBox="0 0 24 24" fill="#FF7A59"><path d="M22.175 14.468a5.26 5.26 0 01-3.394 3.395 5.249 5.249 0 01-5.344-1.264 5.249 5.249 0 01-1.263-5.344 5.26 5.26 0 013.395-3.395V5.46a1.89 1.89 0 001.095-1.716v-.056a1.893 1.893 0 00-3.785 0v.056c0 .776.47 1.445 1.146 1.735v2.386a8.657 8.657 0 00-4.52 2.465L5.52 7.52a2.11 2.11 0 10-1.025 1.806l3.94 2.84a8.686 8.686 0 00-.43 2.68 8.7 8.7 0 008.7 8.7 8.7 8.7 0 008.7-8.7 8.68 8.68 0 00-.23-2.378zm-5.455 6.122a4.199 4.199 0 110-8.398 4.199 4.199 0 010 8.398z"/></svg>
+                </span>
+                HubSpot
+              </span>
+
+              <!-- Kony Visualizer (Temenos) -->
+              <span class="skill-badge">
+                <span class="skill-icon">
+                  <svg viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#0066CC"/><path d="M6 7h3l3 5-3 5H6l3-5zm6 0h3l3 5-3 5h-3l3-5z" fill="white"/></svg>
+                </span>
+                Kony Visualizer
+              </span>
+
+              <!-- UI/UX (Figma) -->
+              <span class="skill-badge">
+                <span class="skill-icon">
+                  <svg viewBox="0 0 24 24"><path d="M8 24c2.208 0 4-1.792 4-4v-4H8c-2.208 0-4 1.792-4 4s1.792 4 4 4z" fill="#0ACF83"/><path d="M4 12c0-2.208 1.792-4 4-4h4v8H8c-2.208 0-4-1.792-4-4z" fill="#A259FF"/><path d="M4 4c0-2.208 1.792-4 4-4h4v8H8C5.792 8 4 6.208 4 4z" fill="#F24E1E"/><path d="M12 0h4c2.208 0 4 1.792 4 4s-1.792 4-4 4h-4V0z" fill="#FF7262"/><path d="M20 12c0 2.208-1.792 4-4 4s-4-1.792-4-4 1.792-4 4-4 4 1.792 4 4z" fill="#1ABCFE"/></svg>
+                </span>
+                UI/UX
+              </span>
+
+              <!-- Designing/Development -->
+              <span class="skill-badge">
+                <span class="skill-icon">
+                  <svg viewBox="0 0 24 24" fill="#6366f1"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+                </span>
+                Design & Development
+              </span>
+
+              <!-- VS Code -->
+              <span class="skill-badge">
+                <span class="skill-icon">
+                  <svg viewBox="0 0 24 24" fill="#007ACC"><path d="M23.15 2.587L18.21.21a1.494 1.494 0 00-1.705.29l-9.46 8.63-4.12-3.128a.999.999 0 00-1.276.057L.327 7.261A1 1 0 00.326 8.74L3.899 12 .326 15.26a1 1 0 00.001 1.479L1.65 17.94a.999.999 0 001.276.057l4.12-3.128 9.46 8.63a1.492 1.492 0 001.704.29l4.942-2.377A1.5 1.5 0 0024 20.06V3.939a1.5 1.5 0 00-.85-1.352zm-5.146 14.861L10.826 12l7.178-5.448v10.896z"/></svg>
+                </span>
+                VS Code
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about__footer animate-fade-up delay-6">
+          <span>© 2026 Aniq Ali</span>
+          <span>Privacy Policy</span>
+          <span>Legal Notice</span>
+          <!-- <a href="#">Privacy Policy</a>
+          <a href="#">Legal Notice</a> -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ─── CTA Button ──────────────────────────────── -->
+  <a href="#" class="cta-button" id="cta-btn">
+    <span>Work<br>with me</span>
+    <span class="cta-arrow">
+      <svg viewBox="0 0 24 24"><path d="M14 3l7 7-7 7-1.41-1.41L18.17 11H3V9h15.17l-5.58-5.59z"/></svg>
+    </span>
+  </a>
+
+  <!-- ─── Contact Modal ──────────────────────────── -->
+  <div class="modal-backdrop" id="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal">
+      <div class="modal__header">
+        <div>
+          <h2 id="modal-title">Let's work together</h2>
+          <p>Send me a message and I'll get back to you soon.</p>
+        </div>
+        <button class="modal__close" id="modal-close" aria-label="Close">✕</button>
+      </div>
+      <form class="modal__form" id="contact-form" novalidate>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell me about your project..." required></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Send Message →</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

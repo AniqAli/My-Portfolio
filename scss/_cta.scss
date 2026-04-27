@@ -1,0 +1,102 @@
+.cta-button {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 150;
+  background: $navy;
+  color: $white;
+  padding: 0.9rem 1.4rem;
+  border-radius: 14px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.3;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: all $duration $ease;
+  box-shadow: 0 4px 20px rgba($navy, 0.3);
+  letter-spacing: 0.01em;
+
+  .cta-arrow {
+    width: 28px;
+    height: 28px;
+    background: rgba($white, 0.15);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform $duration $ease;
+
+    svg {
+      width: 14px;
+      height: 14px;
+      fill: $white;
+    }
+  }
+
+  &:hover {
+    background: $navy-light;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba($navy, 0.35);
+
+    .cta-arrow {
+      transform: translate(2px, -2px);
+    }
+  }
+
+  @media (max-width: $bp-md) {
+    display: none;
+  }
+}
+
+// Mobile-only inline CTA inside hero content
+.cta-button--mobile {
+  display: none;
+
+  @media (max-width: $bp-md) {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 2rem;
+    background: $navy;
+    color: $white;
+    padding: 0.9rem 1.4rem;
+    border-radius: 14px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    line-height: 1.3;
+    text-align: center;
+    transition: all $duration $ease;
+    box-shadow: 0 4px 20px rgba($navy, 0.3);
+    letter-spacing: 0.01em;
+    width: fit-content;
+
+    .cta-arrow {
+      width: 28px;
+      height: 28px;
+      background: rgba($white, 0.15);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform $duration $ease;
+
+      svg {
+        width: 14px;
+        height: 14px;
+        fill: $white;
+      }
+    }
+
+    &:hover {
+      background: $navy-light;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba($navy, 0.35);
+
+      .cta-arrow {
+        transform: translate(2px, -2px);
+      }
+    }
+  }
+}

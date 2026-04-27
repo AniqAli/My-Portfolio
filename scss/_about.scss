@@ -1,0 +1,154 @@
+.section--about {
+  min-height: 100vh;
+  padding: 5rem;
+  background: linear-gradient(160deg, $white 60%, $off-white 100%);
+
+  @media (max-width: $bp-md) {
+    padding: 5rem 2rem 4rem;
+  }
+}
+
+.about {
+  max-width: 800px;
+
+  &__label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: $blue-accent;
+    margin-bottom: 0.5rem;
+  }
+
+  &__name {
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    color: $text-dark;
+    line-height: 1;
+    margin-bottom: 0.35rem;
+  }
+
+  &__location {
+    font-size: 0.95rem;
+    color: $text-muted;
+    margin-bottom: 2.5rem;
+  }
+
+  &__section-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: $text-dark;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.75rem;
+    margin-top: 2rem;
+  }
+
+  &__text {
+    font-size: 0.95rem;
+    color: $text-muted;
+    line-height: 1.75;
+    margin-bottom: 0.75rem;
+    max-width: 620px;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: $navy;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color $duration $ease;
+
+    &:hover {
+      color: $blue-accent;
+    }
+  }
+
+  &__skills {
+    margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+
+    @media (max-width: $bp-md) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__skill-group {
+    h3 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: $text-dark;
+      margin-bottom: 1rem;
+
+      span {
+        color: $navy;
+      }
+    }
+  }
+
+  &__skill-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+}
+
+.skill-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.9rem;
+  border: 1.5px solid $border;
+  border-radius: 10px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: $text-dark;
+  background: $white;
+  transition: all $duration $ease;
+
+  .skill-icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &:hover {
+    border-color: $navy;
+    background: $off-white;
+    transform: translateY(-2px);
+  }
+}
+
+.about__footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid $border;
+  font-size: 0.8rem;
+  color: $text-muted;
+  display: flex;
+  gap: 1.5rem;
+
+  a {
+    color: $text-muted;
+    transition: color $duration $ease;
+
+    &:hover {
+      color: $navy;
+    }
+  }
+}

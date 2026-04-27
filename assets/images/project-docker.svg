@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#0a1628"/>
+    </linearGradient>
+    <linearGradient id="btnGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#238636"/>
+      <stop offset="100%" style="stop-color:#2ea043"/>
+    </linearGradient>
+    <linearGradient id="clickBtn" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1f6feb"/>
+      <stop offset="100%" style="stop-color:#388bfd"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg)"/>
+
+  <!-- Subtle grid lines -->
+  <line x1="0" y1="150" x2="800" y2="150" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+  <line x1="0" y1="300" x2="800" y2="300" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+  <line x1="266" y1="0" x2="266" y2="450" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+  <line x1="533" y1="0" x2="533" y2="450" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+
+  <!-- Navbar -->
+  <rect width="800" height="52" fill="rgba(22,27,34,0.95)" stroke="rgba(48,54,61,1)" stroke-width="1"/>
+  <!-- GitHub-style octocat icon -->
+  <circle cx="32" cy="26" r="12" fill="#f0f6fc"/>
+  <circle cx="32" cy="22" r="6" fill="#0d1117"/>
+  <ellipse cx="24" cy="30" rx="4" ry="3" fill="#0d1117"/>
+  <ellipse cx="40" cy="30" rx="4" ry="3" fill="#0d1117"/>
+  <!-- Logo text -->
+  <text x="52" y="32" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#f0f6fc">ClicktoDeploy</text>
+  <!-- Nav items -->
+  <text x="220" y="31" font-family="Arial,sans-serif" font-size="13" fill="rgba(240,246,252,0.7)">Repos</text>
+  <text x="280" y="31" font-family="Arial,sans-serif" font-size="13" fill="rgba(240,246,252,0.7)">Projects</text>
+  <text x="355" y="31" font-family="Arial,sans-serif" font-size="13" fill="rgba(240,246,252,0.7)">Deployments</text>
+  <text x="460" y="31" font-family="Arial,sans-serif" font-size="13" fill="rgba(240,246,252,0.7)">Docs</text>
+  <!-- Search bar -->
+  <rect x="530" y="12" width="160" height="28" rx="6" fill="rgba(22,27,34,1)" stroke="rgba(48,54,61,1)" stroke-width="1"/>
+  <text x="548" y="30" font-family="monospace" font-size="11" fill="rgba(255,255,255,0.3)">Search repos...</text>
+  <!-- Avatar -->
+  <circle cx="744" cy="26" r="14" fill="#30363d"/>
+  <circle cx="744" cy="22" r="6" fill="#6e7681"/>
+  <ellipse cx="744" cy="34" rx="8" ry="5" fill="#6e7681"/>
+
+  <!-- Main content area -->
+  <!-- Repo card / deploy panel -->
+  <rect x="32" y="70" width="480" height="300" rx="10" fill="rgba(22,27,34,0.9)" stroke="rgba(48,54,61,1)" stroke-width="1"/>
+
+  <!-- Repo header -->
+  <rect x="32" y="70" width="480" height="50" rx="10" fill="rgba(22,27,34,1)"/>
+  <rect x="32" y="100" width="480" height="20" fill="rgba(22,27,34,1)"/>
+  <!-- Repo icon + name -->
+  <rect x="52" y="82" width="16" height="14" rx="3" fill="none" stroke="#388bfd" stroke-width="1.5"/>
+  <text x="76" y="94" font-family="monospace" font-size="13" fill="#388bfd" font-weight="600">aniqali / clicktodeploy</text>
+  <!-- Branch badge -->
+  <rect x="258" y="82" width="60" height="16" rx="8" fill="rgba(56,139,253,0.1)" stroke="rgba(56,139,253,0.4)" stroke-width="1"/>
+  <text x="288" y="93" text-anchor="middle" font-family="monospace" font-size="9" fill="#388bfd">main</text>
+  <!-- Star / Fork -->
+  <text x="370" y="93" font-family="Arial,sans-serif" font-size="11" fill="rgba(255,255,255,0.4)">⭐ 42</text>
+  <text x="420" y="93" font-family="Arial,sans-serif" font-size="11" fill="rgba(255,255,255,0.4)">🍴 12</text>
+
+  <!-- Divider -->
+  <line x1="32" y1="120" x2="512" y2="120" stroke="rgba(48,54,61,1)" stroke-width="1"/>
+
+  <!-- Deploy steps -->
+  <!-- Step 1 -->
+  <circle cx="68" cy="152" r="14" fill="rgba(56,139,253,0.15)" stroke="#388bfd" stroke-width="1.5"/>
+  <text x="68" y="157" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#388bfd" font-weight="700">1</text>
+  <text x="92" y="150" font-family="Arial,sans-serif" font-size="12" fill="#f0f6fc" font-weight="600">Connect Repository</text>
+  <text x="92" y="166" font-family="monospace" font-size="10" fill="#6e7681">github.com/aniqali/clicktodeploy</text>
+  <rect x="430" y="140" width="70" height="22" rx="5" fill="url(#btnGrad)"/>
+  <text x="465" y="155" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="white" font-weight="600">✓ Connected</text>
+
+  <line x1="68" y1="166" x2="68" y2="192" stroke="rgba(48,54,61,1)" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <!-- Step 2 -->
+  <circle cx="68" cy="206" r="14" fill="rgba(56,139,253,0.15)" stroke="#388bfd" stroke-width="1.5"/>
+  <text x="68" y="211" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#388bfd" font-weight="700">2</text>
+  <text x="92" y="204" font-family="Arial,sans-serif" font-size="12" fill="#f0f6fc" font-weight="600">Configure Build</text>
+  <!-- Config pills -->
+  <rect x="92" y="212" width="60" height="16" rx="4" fill="rgba(36,150,237,0.15)" stroke="rgba(36,150,237,0.3)" stroke-width="1"/>
+  <text x="122" y="223" text-anchor="middle" font-family="monospace" font-size="9" fill="#2496ED">Docker</text>
+  <rect x="160" y="212" width="50" height="16" rx="4" fill="rgba(97,218,251,0.1)" stroke="rgba(97,218,251,0.3)" stroke-width="1"/>
+  <text x="185" y="223" text-anchor="middle" font-family="monospace" font-size="9" fill="#61DAFB">React</text>
+  <rect x="218" y="212" width="50" height="16" rx="4" fill="rgba(100,181,246,0.1)" stroke="rgba(100,181,246,0.3)" stroke-width="1"/>
+  <text x="243" y="223" text-anchor="middle" font-family="monospace" font-size="9" fill="#64B5F6">Cloud</text>
+
+  <line x1="68" y1="220" x2="68" y2="248" stroke="rgba(48,54,61,1)" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <!-- Step 3 -->
+  <circle cx="68" cy="262" r="14" fill="rgba(56,139,253,0.15)" stroke="#388bfd" stroke-width="1.5"/>
+  <text x="68" y="267" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#388bfd" font-weight="700">3</text>
+  <text x="92" y="260" font-family="Arial,sans-serif" font-size="12" fill="#f0f6fc" font-weight="600">Deploy to Cloud</text>
+  <!-- Progress bar -->
+  <rect x="92" y="268" width="320" height="8" rx="4" fill="rgba(48,54,61,1)"/>
+  <rect x="92" y="268" width="260" height="8" rx="4" fill="url(#clickBtn)"/>
+  <text x="424" y="276" font-family="monospace" font-size="9" fill="#388bfd">81%</text>
+
+  <!-- Big deploy button -->
+  <rect x="52" y="298" width="440" height="52" rx="8" fill="url(#clickBtn)" style="cursor:pointer"/>
+  <!-- Cursor icon -->
+  <text x="196" y="329" font-family="Arial,sans-serif" font-size="18">🖱️</text>
+  <text x="220" y="332" font-family="Arial,sans-serif" font-size="16" fill="white" font-weight="700">Click to Deploy</text>
+  <rect x="356" y="311" width="110" height="28" rx="6" fill="rgba(255,255,255,0.15)"/>
+  <text x="411" y="329" text-anchor="middle" font-family="monospace" font-size="11" fill="white">1-click ✓</text>
+
+  <!-- Right panel - live log -->
+  <rect x="530" y="70" width="238" height="300" rx="10" fill="#0d1117" stroke="rgba(48,54,61,1)" stroke-width="1"/>
+  <!-- Log header -->
+  <rect x="530" y="70" width="238" height="36" rx="10" fill="rgba(22,27,34,1)"/>
+  <rect x="530" y="90" width="238" height="16" fill="rgba(22,27,34,1)"/>
+  <circle cx="550" cy="88" r="5" fill="#ff5f57"/>
+  <circle cx="566" cy="88" r="5" fill="#febc2e"/>
+  <circle cx="582" cy="88" r="5" fill="#28c840"/>
+  <text x="610" y="92" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.4)">Deploy Log</text>
+
+  <!-- Log lines -->
+  <text x="544" y="124" font-family="monospace" font-size="9" fill="#6e7681">$ git clone repo...</text>
+  <text x="544" y="140" font-family="monospace" font-size="9" fill="#7ee787">✓ Cloned successfully</text>
+  <text x="544" y="156" font-family="monospace" font-size="9" fill="#6e7681">$ docker build -t app .</text>
+  <text x="544" y="172" font-family="monospace" font-size="9" fill="#6e7681">  Step 1/8: FROM node:18</text>
+  <text x="544" y="188" font-family="monospace" font-size="9" fill="#6e7681">  Step 2/8: WORKDIR /app</text>
+  <text x="544" y="204" font-family="monospace" font-size="9" fill="#7ee787">✓ Image built (4.2s)</text>
+  <text x="544" y="220" font-family="monospace" font-size="9" fill="#6e7681">$ docker push registry...</text>
+  <text x="544" y="236" font-family="monospace" font-size="9" fill="#7ee787">✓ Pushed to registry</text>
+  <text x="544" y="252" font-family="monospace" font-size="9" fill="#6e7681">$ kubectl apply -f k8s/</text>
+  <text x="544" y="268" font-family="monospace" font-size="9" fill="#388bfd">⟳ Deploying pods...</text>
+  <text x="544" y="284" font-family="monospace" font-size="9" fill="#388bfd">  1/3 pods running</text>
+  <text x="544" y="300" font-family="monospace" font-size="9" fill="#388bfd">  2/3 pods running</text>
+  <!-- Blinking cursor -->
+  <rect x="544" y="316" width="6" height="11" rx="1" fill="#388bfd" opacity="0.8"/>
+
+  <!-- Bottom status bar -->
+  <rect x="0" y="378" width="800" height="72" fill="rgba(13,17,23,0.95)" stroke="rgba(48,54,61,1)" stroke-width="1"/>
+
+  <!-- Status chips -->
+  <rect x="32" y="396" width="120" height="28" rx="6" fill="rgba(46,160,67,0.15)" stroke="rgba(46,160,67,0.4)" stroke-width="1"/>
+  <circle cx="50" cy="410" r="5" fill="#2ea043"/>
+  <text x="100" y="414" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#2ea043" font-weight="600">React App Live</text>
+
+  <rect x="164" y="396" width="120" height="28" rx="6" fill="rgba(36,150,237,0.15)" stroke="rgba(36,150,237,0.4)" stroke-width="1"/>
+  <circle cx="182" cy="410" r="5" fill="#2496ED"/>
+  <text x="232" y="414" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#2496ED" font-weight="600">Docker Running</text>
+
+  <rect x="296" y="396" width="130" height="28" rx="6" fill="rgba(100,181,246,0.1)" stroke="rgba(100,181,246,0.3)" stroke-width="1"/>
+  <circle cx="314" cy="410" r="5" fill="#64B5F6"/>
+  <text x="369" y="414" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#64B5F6" font-weight="600">Cloud Deployed</text>
+
+  <text x="600" y="408" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.3)">netlify.app</text>
+  <rect x="580" y="414" width="180" height="1" fill="rgba(56,139,253,0.3)"/>
+  <text x="600" y="430" font-family="monospace" font-size="9" fill="#388bfd">github-fyp.netlify.app</text>
+</svg>

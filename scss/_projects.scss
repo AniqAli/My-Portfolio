@@ -1,0 +1,171 @@
+.section--projects {
+  min-height: 100vh;
+  padding: 5rem;
+  background: $white;
+
+  @media (max-width: $bp-md) {
+    padding: 5rem 2rem 4rem;
+  }
+}
+
+.projects-header {
+  margin-bottom: 3rem;
+
+  &__label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: $blue-accent;
+    margin-bottom: 0.5rem;
+  }
+
+  &__title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: $text-dark;
+  }
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  border: 1.5px solid $border;
+  border-radius: 18px;
+  overflow: hidden;
+  transition: all $duration $ease;
+  background: $white;
+  cursor: pointer;
+
+  &:hover {
+    border-color: rgba($navy, 0.25);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba($navy, 0.1);
+
+    .project-card__image img {
+      transform: scale(1.04);
+    }
+
+    .project-card__arrow {
+      background: $navy;
+      color: $white;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    background: $off-white;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s $ease;
+    }
+
+    &--placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+    }
+
+    // Profile/logo card variant — taller portrait ratio, centered content
+    &.profile-logo {
+      aspect-ratio: 3/2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__body {
+    padding: 1.5rem;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 0.85rem;
+  }
+
+  &__tag {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.65rem;
+    background: $off-white;
+    color: $navy;
+    border-radius: 100px;
+    border: 1px solid $border;
+  }
+
+  &__title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: $text-dark;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+  }
+
+  &__desc {
+    font-size: 0.88rem;
+    color: $text-muted;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__links {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  &__link {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: $navy;
+    border: 1.5px solid $border;
+    padding: 0.35rem 0.85rem;
+    border-radius: 8px;
+    transition: all $duration $ease;
+
+    &:hover {
+      background: $navy;
+      color: $white;
+      border-color: $navy;
+    }
+  }
+
+  &__arrow {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    border: 1.5px solid $border;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $text-dark;
+    transition: all $duration $ease;
+
+    svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+  }
+}
